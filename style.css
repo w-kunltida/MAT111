@@ -1,0 +1,50 @@
+/* Custom Fonts Support */
+body {
+  font-family: 'Prompt', sans-serif;
+}
+
+h1, h2, h3, .font-mali {
+  font-family: 'Mali', cursive;
+}
+
+/* Custom Scrollbar สำหรับมือถือ */
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #A8C8A0;
+  border-radius: 10px;
+}
+
+/* Tab Navigation Active & Inactive States */
+.nav-btn.active {
+  color: #355C41;
+  font-weight: 700;
+}
+
+.nav-btn.active .icon-wrapper {
+  background-color: #CDE8D1;
+}
+
+.nav-btn.active i {
+  transform: scale(1.1);
+  stroke-width: 2.5px;
+}
+
+.nav-btn.inactive {
+  color: rgba(92, 64, 46, 0.6);
+}
+
+.nav-btn.inactive:hover {
+  color: #5C402E;
+}
+
+.nav-btn.inactive .icon-wrapper {
+  background-color: transparent;
+}
