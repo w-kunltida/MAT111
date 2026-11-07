@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PAWLET - ทิ้งขยะให้ถูกวิธี ปกป้องชีวิตสัตว์ป่า</title>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Mali:wght@400;600;700&family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <body class="bg-[#355C41] min-h-screen font-['Prompt'] flex items-center justify-center p-0 sm:p-4 text-[#5C402E]">
+
+  <!-- Mobile Device Frame Container -->
+  <div class="w-full max-w-sm h-screen sm:h-[844px] bg-[#FFF9ED] sm:rounded-[48px] shadow-2xl flex flex-col justify-between overflow-hidden relative border-0 sm:border-[8px] sm:border-[#5C402E]/20">
+    
+    <!-- Status Bar (Mobile Mockup Header) -->
+    <div class="bg-[#FFF9ED] pt-3 pb-1 px-6 flex justify-between items-center text-xs text-[#5C402E]/60 z-30 select-none">
+      <span class="font-semibold text-xs">9:41</span>
+      <!-- Dynamic Island Mockup -->
+      <div class="w-20 h-4 bg-[#5C402E]/10 rounded-full hidden sm:block"></div>
+      <div class="flex items-center gap-1.5">
+        <i data-lucide="wifi" class="w-3.5 h-3.5"></i>
+        <i data-lucide="battery" class="w-3.5 h-3.5"></i>
+      </div>
+    </div>
+
+    <!-- App Header -->
+    <header class="bg-[#FFF9ED]/90 backdrop-blur-md px-4 py-2 flex justify-between items-center z-20 border-b border-[#A8C8A0]/20">
+      <div class="flex items-center gap-2">
+        <div class="w-8 h-8 rounded-full bg-[#CDE8D1] flex items-center justify-center text-lg shadow-sm">
+          🦦
+        </div>
+        <div>
+          <h1 class="font-['Mali'] font-bold text-sm text-[#355C41] leading-none">PAWLET</h1>
+          <p class="text-[10px] text-[#5C402E]/70 font-medium">มาเก็บขยะเพื่อ save สัตว์ป่ากัน!</p>
+        </div>
+      </div>
+      <div class="bg-[#CDE8D1]/50 px-2.5 py-1 rounded-full flex items-center gap-1 text-[11px] font-semibold text-[#355C41]">
+        <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+        โหมดเรียนรู้
+      </div>
+    </header>
+
+    <!-- Main Content Area (Dynamic Screens) -->
+    <main id="main-content" class="flex-1 overflow-y-auto px-4 py-4 pb-24">
+      <!-- Content injected dynamically via main.js -->
+    </main>
+
+    <!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 left-0 right-0 max-w-sm mx-auto bg-[#FFF9ED]/95 backdrop-blur-md border-t border-[#A8C8A0]/30 px-2 py-2 flex justify-around items-center z-40 rounded-b-[40px]">
+  <button onclick="switchTab('home')" id="nav-home" class="nav-btn flex-1 flex flex-col items-center gap-1 py-1 px-2 rounded-2xl transition-all duration-300">
+    <div class="icon-wrapper p-1.5 rounded-xl transition-all duration-300">
+      <i data-lucide="home" class="w-5 h-5"></i>
+    </div>
+    <span class="text-[11px] tracking-tight">หน้าหลัก</span>
+  </button>
+
+  <button onclick="switchTab('scan')" id="nav-scan" class="nav-btn flex-1 flex flex-col items-center gap-1 py-1 px-2 rounded-2xl transition-all duration-300">
+    <div class="icon-wrapper p-1.5 rounded-xl transition-all duration-300">
+      <i data-lucide="sparkles" class="w-5 h-5"></i>
+    </div>
+    <span class="text-[11px] tracking-tight">สแกนขยะ</span>
+  </button>
+
+  <button onclick="switchTab('wildlife')" id="nav-wildlife" class="nav-btn flex-1 flex flex-col items-center gap-1 py-1 px-2 rounded-2xl transition-all duration-300">
+    <div class="icon-wrapper p-1.5 rounded-xl transition-all duration-300">
+      <i data-lucide="paw-print" class="w-5 h-5"></i>
+    </div>
+    <span class="text-[11px] tracking-tight">คลังสัตว์ป่า</span>
+  </button>
+
+  <button onclick="switchTab('about')" id="nav-about" class="nav-btn flex-1 flex flex-col items-center gap-1 py-1 px-2 rounded-2xl transition-all duration-300">
+    <div class="icon-wrapper p-1.5 rounded-xl transition-all duration-300">
+      <i data-lucide="info" class="w-5 h-5"></i>
+    </div>
+    <span class="text-[11px] tracking-tight">เกี่ยวกับ</span>
+  </button>
+</nav>
+
+  </div>
+
+  <!-- Custom JavaScript -->
+  <script src="Pawlet.js"></script>
+</body>
+</html>
